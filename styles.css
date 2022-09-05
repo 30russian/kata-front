@@ -1,0 +1,99 @@
+@font-face {
+    font-family: "Barlow Light";
+    src: url("fonts/Barlow-Light.otf");
+}
+
+html {
+    font-family: "Barlow Light", sans-serif;
+    /*background-color: #EFF6FF;*/
+}
+
+body {
+    margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2A4A5C;
+}
+
+section {
+    display: flex;
+}
+
+.leftside {
+    background: url("img/bg.jpg");
+    width: 759px;
+    height: 1000px;
+}
+
+.logo {
+    width: auto;
+    height: 40px;
+    margin: 50px;
+}
+
+.rightside {
+    flex-basis: 619px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0px 70px;
+    /*padding-left: 50px;*/
+}
+
+.form-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    width: 285px;
+}
+
+.fb-btn {
+    background-color: #255A9B;
+}
+
+.l-btn {
+    background-color: #0076B6;
+}
+
+.btn:hover {
+    background-color: #255A9B;
+}
+
+.btn-icon {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+}
+
+.fb-icon {
+    background: url("img/facebook.svg") no-repeat;
+}
+
+.l-icon {
+    background: url("img/linkedin.svg") no-repeat;
+}
+
+h6.choose {
+    overflow: hidden;
+    text-align: center;
+    color: #AFAFAF;
+}
+
+h6.choose:before,
+h6.choose:after {
+    background-color: #AFAFAF;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    vertical-align: middle;
+    width: 50px;
+}
