@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'TT Lakes Regular';
+    src: url('fonts/cps/TTLakes-Regular.eot');
+    src: url('fonts/cps/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/cps/TTLakes-Regular.woff') format('woff'),
+    url('fonts/cps/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Medium';
+    src: url('fonts/cps/TTLakes-Medium.eot');
+    src: url('fonts/cps/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/cps/TTLakes-Medium.woff') format('woff'),
+    url('fonts/cps/TTLakes-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Bold';
+    src: url('fonts/cps/TTLakes-Bold.eot');
+    src: url('fonts/cps/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/cps/TTLakes-Bold.woff') format('woff'),
+    url('fonts/cps/TTLakes-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+.page-header {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid #D9FFF5;
+}
+
+.navigation {
+    overflow: scroll;
+}
+
+.navigation__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navigation__logo {
+    background: no-repeat center url("img/cps/logo.svg");
+    width: 96px;
+    height: 50px;
+    min-width: 96px;
+    min-height: 50px;
+}
+
+.navigation__divider {
+    width: 2px;
+    height: 32px;
+    background: #EAEAEA;
+    border-radius: 1px;
+}
+
+.navigation__burger,
+.navigation__call,
+.navigation__chat,
+.navigation__profile,
+.navigation__status,
+.navigation__repair {
+    background-color: #FF3E79;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.navigation__burger {
+    background-image: url("img/cps/burger.png");
+}
+
+.navigation__call {
+    background-image: url("img/cps/call.png");
+}
+
+.navigation__chat {
+    background-image: url("img/cps/chat.png");
+}
+
+.navigation__profile {
+    background-image: url("img/cps/profile.png");
+}
+
+.navigation__status {
+    background-image: url("img/cps/status.png");
+}
+
+.navigation__repair {
+    background-image: url("img/cps/repair.png");
+}
+
+.page-title {
+    font-family: "TT Lakes Bold", sans-serif;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+    padding-left: 16px;
+    background: no-repeat url("img/cps/highlight.png");
+}
+
+.main-block__slider {
+    margin-left: 16px;
+}
+
+.about__article {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.slide-menu__list {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 0;
+    justify-content: start;
+    align-items: center;
+    list-style-type: none;
+}
+
+.slide-menu__item {
+    background: #FFFFFF;
+    white-space: nowrap;
+    padding: 8px 16px;
+    font-family: "TT Lakes Regular", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+}
+
+.slide-menu__item--bordered {
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+}
+
+.article-short__description {
+    font-family: "TT Lakes Regular", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+}
+
+.article-short__full-link {
+    display: block;
+    width: max-content;
+    font-family: "TTLakes-Medium", sans-serif;
+    font-size: 16px;
+    text-decoration-line: none;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    padding: 8px 8px 8px 16px;
+    background: left center no-repeat url("img/cps/full_link.png");
+}
+
+.section__illustration {
+    width: 100%;
+}
+
+@media (max-width: 320px) {
+    .navigation__call {
+        display: none;
+    }
+
+    .navigation__chat {
+        display: none;
+    }
+
+    .navigation__profile {
+        display: none;
+    }
+
+    .slide-menu {
+        overflow: scroll;
+    }
+
+    .article-short__description:not(:first-child) {
+        display: none;
+    }
+}
+
+@media (min-width: 321px) {
+    .navigation__logo {
+        margin-right: auto;
+    }
+
+    .slide-menu {
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 768px) {
+
+}
