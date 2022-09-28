@@ -40,13 +40,22 @@ body {
 }
 
 .page-header {
-    padding-bottom: 20px;
-    padding-top: 20px;
-    border-bottom: 1px solid #D9FFF5;
+    display: flex;
+    flex-wrap: wrap;
+    column-count: 1;
+}
+
+.page-header__navigation {
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
 .navigation {
     overflow: scroll;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid #D9FFF5;
 }
 
 .navigation__list {
@@ -125,11 +134,23 @@ body {
 
 .main-block__slider {
     margin-left: 16px;
+    margin-bottom: 32px;
+}
+
+.about {
+    display: flex;
+    align-items: start;
 }
 
 .about__article {
     margin-left: 16px;
     margin-right: 16px;
+}
+
+.about__illustration {
+    max-width: 50%;
+    height: auto;
+    margin-right: 24px;
 }
 
 .slide-menu__list {
@@ -166,6 +187,10 @@ body {
     color: #1B1C21;
 }
 
+.article-short__description > p {
+    margin: 0;
+}
+
 .article-short__full-link {
     display: block;
     width: max-content;
@@ -179,33 +204,48 @@ body {
     background: left center no-repeat url("img/cps/full_link.png");
 }
 
-.section__illustration {
-    width: 100%;
-}
-
 @media (max-width: 320px) {
-    .navigation__call {
-        display: none;
+    .page-header__navigation {
+        margin: 0;
     }
 
-    .navigation__chat {
-        display: none;
-    }
-
+    .navigation__call,
+    .navigation__chat,
     .navigation__profile {
         display: none;
+    }
+
+    .navigation__item {
+        margin: 0;
+    }
+
+    .about__illustration {
+        max-width: 100%;
     }
 
     .slide-menu {
         overflow: scroll;
     }
 
-    .article-short__description:not(:first-child) {
+    .about {
+        flex-wrap: wrap;
+        column-count: 1;
+    }
+
+    .article-short__description p:not(:first-child) {
         display: none;
     }
 }
 
 @media (min-width: 321px) {
+    .navigation__item {
+        margin-right: 16px;
+    }
+
+    .navigation__item:last-child {
+        margin-right: 0;
+    }
+
     .navigation__logo {
         margin-right: auto;
     }
@@ -216,5 +256,22 @@ body {
 }
 
 @media (min-width: 768px) {
+    .page-header {
+        flex-wrap: nowrap;
+        column-count: 2;
+    }
 
+    .navigation {
+        width: auto;
+        border-bottom: none;
+    }
+
+    .navigation__item {
+        margin-right: 16px;
+    }
+
+    .page-title {
+        order: -1;
+        margin-right: auto;
+    }
 }
