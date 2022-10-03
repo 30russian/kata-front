@@ -46,12 +46,11 @@ body {
 }
 
 .page-header__navigation {
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: 32px;
+    margin-right: 32px;
 }
 
 .navigation {
-    overflow: scroll;
     width: 100%;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -82,44 +81,21 @@ body {
     border-radius: 1px;
 }
 
-.navigation__burger,
-.navigation__call,
-.navigation__chat,
-.navigation__profile,
-.navigation__status,
-.navigation__repair {
-    background-color: #FF3E79;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    min-height: 40px;
+.navigation__link {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    font-family: "TTLakes-Medium", sans-serif;
+    font-size: 16px;
+    text-decoration-line: none;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    padding: 0;
 }
 
-.navigation__burger {
-    background-image: url("img/cps/burger.png");
-}
-
-.navigation__call {
-    background-image: url("img/cps/call.png");
-}
-
-.navigation__chat {
-    background-image: url("img/cps/chat.png");
-}
-
-.navigation__profile {
-    background-image: url("img/cps/profile.png");
-}
-
-.navigation__status {
-    background-image: url("img/cps/status.png");
-}
-
-.navigation__repair {
-    background-image: url("img/cps/repair.png");
+.navigation__link > span {
+    margin-right: 8px;
 }
 
 .page-title {
@@ -209,9 +185,18 @@ body {
         margin: 0;
     }
 
-    .navigation__call,
-    .navigation__chat,
-    .navigation__profile {
+    .navigation {
+        overflow-x: scroll;
+    }
+
+    .navigation__item:nth-child(1) + .navigation__divider,
+    .navigation__item:nth-child(4),
+    .navigation__item:nth-child(5),
+    .navigation__item:nth-child(6) {
+        display: none;
+    }
+
+    .navigation__link > span {
         display: none;
     }
 
@@ -237,7 +222,12 @@ body {
     }
 }
 
-@media (min-width: 321px) {
+@media (max-width: 767px) {
+    .page-header__navigation {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
     .navigation__item {
         margin-right: 16px;
     }
@@ -246,7 +236,11 @@ body {
         margin-right: 0;
     }
 
-    .navigation__logo {
+    .navigation__link > span {
+        display: none;
+    }
+
+    .navigation__item:nth-child(3) {
         margin-right: auto;
     }
 
@@ -268,6 +262,16 @@ body {
 
     .navigation__item {
         margin-right: 16px;
+    }
+
+    .navigation__item:nth-child(1),
+    .navigation__item:nth-child(2),
+    .navigation__item:nth-child(3),
+    .navigation__item:nth-child(4),
+    .navigation__item:nth-child(5),
+    .navigation__item:nth-child(6),
+    .navigation__item:nth-child(7) {
+        display: none;
     }
 
     .page-title {
