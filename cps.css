@@ -141,10 +141,15 @@ body {
 
 .slide-menu__item {
     background: #FFFFFF;
-    white-space: nowrap;
+}
+
+.slide-menu__item > a {
+    display: block;
     padding: 8px 16px;
+    white-space: nowrap;
     font-family: "TT Lakes Regular", sans-serif;
     font-size: 16px;
+    text-decoration-line: none;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7E7E82;
